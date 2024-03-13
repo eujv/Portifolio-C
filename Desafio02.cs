@@ -23,24 +23,24 @@ class Program
         int QuantidadeDesejada = int.Parse(Console.ReadLine());
 
 
-        if (ProdutoDesejado == P1)
+        if (ProdutoDesejado == 1)
         {
             Console.WriteLine("O valor total da sua compra é de: " + QuantidadeDesejada * P1);
 
         }
-        else if (ProdutoDesejado == P2)
+        else if (ProdutoDesejado == 2)
         {
             Console.WriteLine("O valor total de sua compra é de " + P2 * QuantidadeDesejada);
         }
-        else if (ProdutoDesejado == P3)
+        else if (ProdutoDesejado == 3)
         {
             Console.WriteLine("O valor total de sua compra é de " + P3 * QuantidadeDesejada);
         }
-        else if (ProdutoDesejado == P4)
+        else if (ProdutoDesejado == 4)
         {
             Console.WriteLine("O valor total de sua compra é de " + P4 * QuantidadeDesejada);
         }
-        else if (ProdutoDesejado == P5)
+        else if (ProdutoDesejado == 5)
         {
             Console.WriteLine("O valor total de sua compra é de " + P5 * QuantidadeDesejada);
 
