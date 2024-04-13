@@ -1,0 +1,21 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+    int[] vetor = new int[10];
+
+  for(int i = 0; i <10; i++) {
+    Console.WriteLine("Digite o valor da posição " + i + ":");
+    vetor[i] = int.Parse(Console.ReadLine());
+    if(vetor[i] < 0)
+    {
+      vetor[i] = 0;
+      Console.WriteLine("O valor do vetor atual é  " + vetor[i]);        
+    }
+    else{
+      Console.WriteLine("O valor do vetor atual é " + vetor[i]);
+    }
+      }
+    Console.WriteLine("Todos valores preenchidos corretamente");
+  }
+}
