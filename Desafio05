@@ -1,0 +1,71 @@
+using System;
+
+class Program {
+  public static void Main (string[] args) {
+  int [,] Matriz = new int [,]{
+    { 1, 2, 3, 4 },        
+      { 5, 6, 7, 8 },        
+      { 9, 10, 11, 12 },
+    { 15, 16, 17, 18},
+    { 25, 26, 27, 28 },
+    { 65, 66, 67, 68 },
+    { 05, 93, 03 , 90 },
+    { 89, 10, 11, 12 },
+    {78, 78, 78, 78 },
+    { 44, 55, 66, 77 },
+    { 65, 66, 67, 68 },      
+    };
+    
+    int l, i, j;
+    double soma = 0f, media = 0f;
+    char escolha ;
+    
+    Console.Write("Digite o número da linha: ");
+    l = int.Parse(Console.ReadLine());
+
+    Console.Write("Digite S para soma ou M para média: ");
+    escolha = char.Parse(Console.ReadLine());
+
+      for(i=0;i<12;i++){
+      for(j=0;j<12;j++){
+        Console.Write($"Digite o valor da posição m[{i},{j}]: ");
+        Matriz[i,j] = int.Parse(Console.ReadLine());
+        }}
+
+
+      if (escolha == 'S' || escolha == 's'){
+        for(i=l;i<l+1;i++){
+          for(j=0;j<12;j++){
+            soma = soma + Matriz[i,j];
+          }
+        }
+        Console.WriteLine($"A soma é: {soma}");
+      }
+      else if (escolha == 'M' || escolha == 'm'){
+        for(i=l;i<l+1;i++){
+          for(j=0;j<12;j++){
+            soma = soma + Matriz[l,j];  
+            media = (soma / 12) ;  
+          }
+        }
+        media = Math.Round(media,1);
+        Console.WriteLine($"A media é: {media}");
+     }
+      else{
+       Console.WriteLine("Opção inválida");
+      }
+
+    
+
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }
+  }
