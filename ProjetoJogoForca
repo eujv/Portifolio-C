@@ -1,5 +1,5 @@
 using System;
-
+ 
 class Program
 {
     public static void Main(string[] args)
@@ -7,20 +7,20 @@ class Program
         string[] Nomes = { "Joao", "Lucas", "Carlos", "Maria", "Jose" };
         string palavra = "", letra = "";
         int erros = 0, completo = 0, posicao = 0;
-
+ 
         bool sair = false;
-        const int LIMITE = 7;
+        const int LIMITE = 5;
         Random rnd = new Random();
-
-        int escolha = rnd.Next(0, 6);
+ 
+        int escolha = rnd.Next(0, 4);
         palavra = Nomes[escolha];
         string[] letras = new string[palavra.Length];
-
+ 
         while (!sair)
         {
             Console.Clear();
             Console.WriteLine("Erros: {0} de {1}", erros, LIMITE);
-
+ 
             for (int i = 0; i < letras.Length; i++)
             {
                 if (letras[i] != null)
@@ -36,18 +36,18 @@ class Program
             posicao = int.Parse(Console.ReadLine());
             Console.WriteLine("Digite a letra!");
             letra = Console.ReadLine();
-
-            if (Nomes.ElementAt(posicao - 1) == letras.ElementAt(0))
-            {
-                letras[posicao - 1] = letra;
-
+ 
+          if (palavra[posicao - 1].ToString().Equals(letra, StringComparison.OrdinalIgnoreCase))
+          {
+              letras[posicao - 1] = letra;
+ 
                 completo++;
-
+ 
             }
             else
             {
                 erros++;
-
+ 
             }
             if (erros >= LIMITE)
             {
@@ -56,29 +56,26 @@ class Program
             if (completo == palavra.Length)
             {
                 sair = true;
-
+ 
             }
             if (completo == palavra.Length)
             {
                 Console.Clear();
-                Console.WriteLine("Parabens!A palavra era: {0}", palavra);
-
+                Console.WriteLine("Parabens! A palavra era: {0}", palavra);
+ 
             }
             else if (erros == LIMITE)
             {
                 Console.Clear();
-                Console.WriteLine("Voce errou 7 vezes ,voce morreu");
-
+                Console.WriteLine("Voce errou 7 vezes ,você morreu");
+ 
             }
             Console.ReadKey();
-
-
-
-
-
-
-
+ 
+ 
+ 
+ 
         }
-        
     }
 }
+tem menu de contexto
